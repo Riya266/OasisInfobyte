@@ -1,29 +1,29 @@
 #TASK 4-ONLINE EXAMINATION
 
-import java.util.*;
+    import java.util.*;
 
-class User {
+    class User {
     String username;
     String password;
 
-User(String username, String password) {
+    User(String username, String password) {
     this.username = username;
     this.password = password;
-}
+    }
 
-void updateProfile(String newUsername, String newPassword) {
+    void updateProfile(String newUsername, String newPassword) {
     this.username = newUsername;
     this.password = newPassword;
     System.out.println("Profile updated successfully!");
-}
-}
+    }
+    }
 
-public class OnlineExamination {
+    public class OnlineExamination {
     static Scanner sc = new Scanner(System.in);
     static User user = new User("student", "1234"); // default login
     static boolean loggedIn = false;
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
     int choice;
     do {
         System.out.println("\n===== ONLINE EXAMINATION SYSTEM =====");
@@ -44,9 +44,9 @@ public static void main(String[] args) {
             default: System.out.println("Invalid choice!");
         }
     } while (choice != 5);
-}
+    }
 
-static void login() {
+    static void login() {
     System.out.print("Enter Username: ");
     String u = sc.next();
     System.out.print("Enter Password: ");
@@ -58,17 +58,17 @@ static void login() {
     } else {
         System.out.println("Invalid credentials.");
     }
-}
+    }
 
-static void updateProfile() {
+    static void updateProfile() {
     System.out.print("Enter new username: ");
     String newU = sc.next();
     System.out.print("Enter new password: ");
     String newP = sc.next();
     user.updateProfile(newU, newP);
-}
+    }
 
-static void startExam() {
+    static void startExam() {
     System.out.println("\nExam Started! (Timer: 60 seconds)");
     String[] questions = {
             "Q1. Java is a ____ language? \n1.Object-Oriented  2.Procedural  3.Scripting  4.Machine",
@@ -93,19 +93,19 @@ static void startExam() {
         if (ans == answers[i]) score++;
     }
     System.out.println("Exam finished. Your Score: " + score + "/" + questions.length);
-}
+    }
 
-static void logout() {
+    static void logout() {
     loggedIn = false;
     System.out.println("Logged out successfully.");
-}
-}
+    }
+    }
 #TASK 2- NUMBER GUESSING GAME
 
-  import java.util.Scanner;
-  import java.util.Random;
+    import java.util.Scanner;
+    import java.util.Random;
 
-  public class NumberGuessingGame {
+    public class NumberGuessingGame {
       public static void main(String[] args) {
           Scanner sc = new Scanner(System.in);
           Random rand = new Random();
@@ -133,5 +133,5 @@ static void logout() {
     }
 
     sc.close();
-}
-}
+    }
+    }
